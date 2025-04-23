@@ -76,4 +76,34 @@ public class PersonTests
             Assert.That(consoleContent.ToString(), Does.Contain(hi));
         }
     }
+    /// <summary>
+    /// Prueba que no se puedan asignar cédulas inválidas.
+    /// </summary>
+    [Test]
+    public void TestInvalidId()
+    {
+        const string name = "Nombre Apellido";
+        const string invalidId = "123"; // Ejemplo de cédula inválida
+
+        Person person = new Person(name, "1234567-2");
+        Console.WriteLine(person.Id);
+
+        person.Id = invalidId;
+
+        Assert.That(person.Id, Is.EqualTo("1234567-2"));
+
+    }
+    /// <summary>
+    /// Prueba que no se puedan asignar cédulas validas.
+    /// </summary>
+    [Test]
+    public void TestvalidId()
+    {
+        const string name = "Nombre Apellido";
+        const string ValidId = "1234567-2"; // Ejemplo de cédula inválida
+
+        Person person = new Person(name, ValidId);
+        Assert.That(person.Id, Is.EqualTo("1234567-2"));
+
+    }
 }

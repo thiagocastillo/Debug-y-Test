@@ -25,9 +25,14 @@
             Prueba el método <see cref="M:Ucu.Poo.Persons.Person.IntroduceTo(Ucu.Poo.Persons.Person)"/>.
             </summary>
         </member>
-        <member name="M:Ucu.Poo.Persons.Tests.PersonTests.TestID">
+        <member name="M:Ucu.Poo.Persons.Tests.PersonTests.TestInvalidId">
             <summary>
-            Prueba que no se pueda asignar una cédula inválida.
+            Prueba que no se puedan asignar cédulas inválidas.
+            </summary>
+        </member>
+        <member name="M:Ucu.Poo.Persons.Tests.PersonTests.TestvalidId">
+            <summary>
+            Prueba que no se puedan asignar cédulas validas.
             </summary>
         </member>
     </members>
